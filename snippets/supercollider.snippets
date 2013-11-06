@@ -1,0 +1,176 @@
+# synthesis
+snippet buf
+	Buffer.read(${1:s}, "${2:sounds/a11wlk01.wav}");
+snippet syn
+	Synth(\${1:name}, [${2:\out, 0}]);
+snippet sdef
+	(
+	SynthDef(\${1:foobar}, { |${2:out=0, gate=1}|
+		var env = Linen.kr(gate, 0.01, 1, 0.01, 2);
+		var snd;
+		
+		snd = ${3:/*noise*/};
+		snd = snd * env;
+		Out.ar(out, snd);
+	}).add;
+	)
+# language
+snippet if
+	if(${1:condition}) {
+		${2://true};
+	}
+snippet sw 
+	${1:condition}.switch(
+		${2:case}, {${3://reaction}}
+	)
+# live-coding
+snippet px
+	p = ProxySpace.push(s.boot);
+snippet pb
+	Pbind(*[
+		${1:dur}: ${2:0.2}
+	])
+snippet pd
+	(
+	Pdef(\${1:proxy},
+		Pbind(*[
+			${2:dur}: ${3:0.2}
+		])
+	).play;
+	)
+snippet pdn
+	Pdefn(\${1:proxy});
+snippet td
+	(
+	Tdef(\${1:taskProxy}, {
+		${2:inf}.do {
+			${3://your music};
+			1.wait;
+		}
+	}).play;
+	)
+# GUI snippets
+snippet slid 
+	EZSlider(${1:w}, ${2:380}@${3:20}, "${4:slider}", \${5:unipolar}, { |sl|
+		${6:sl.value};
+	});
+snippet gui
+	(
+	var w;
+
+	w = Window("${1:window}", Rect(200,200,400,300));
+	w.addFlowLayout;
+	
+	${2://do something}
+	
+	w.front;
+	w.onClose = { };
+	)
+snippet play
+	{${1:SinOsc.ar}}.play;
+snippet {
+	{ |${1:arg=value}|
+		${2://do something}
+	}
+snippet Out
+	Out.ar(${1:out},
+		${2:sig}
+	);
+snippet any
+	any { |${1:item}|
+		${2://do something}
+	};
+snippet case
+	case
+	    {${1}}	{${2}}
+		{${3}}	{${4}};
+snippet class
+	${1:Classname} : ${2:Object} {
+		*new { ${3:args}
+			^super.new.init${4};
+		}
+
+		init { ${5}
+			${6}
+		}
+	}
+snippet collect
+	collect({|${1:item}| ${2} })
+snippet da
+	doneAction: ${1:2}{$2}
+snippet di
+	dumpInterface${1}
+snippet dm
+	dumpAllMethods${1}
+snippet do
+	do { |${1:arg}|
+		${2}
+	};
+snippet egen
+	EnvGen.kr(${1:env}, doneAction: ${2:2})
+snippet every
+	every { |${1:item}|
+		${2}
+	};
+snippet flow
+	w.view.decorator = FlowLayout(w.view.bounds);
+snippet get
+	get(${1:0}, {|msg| ${2:msg.postln}});
+snippet he
+	openHelpFile${1}
+snippet ife
+	if(${1:condition}, {
+		${2:true}
+	}, {
+		${3:false}
+	});
+snippet int
+	interpolation:${1}
+snippet is
+	isNil${1}
+snippet mb
+	makeBundle(${1:0.2}, {
+		${2}
+	});
+snippet nn
+	notNil${1}
+snippet np
+	//
+	${1}.postln;
+	//
+	${2}
+snippet oscr
+	OSCresponderNode(${1:nil}, '${2:foo}', { |t, r, msg|
+		${3}
+	}).add;
+snippet pm
+	${1:m} = ProxyMixer.new(${2:p});
+snippet po
+	postln;${1}
+snippet ps
+	p = ProxySpace.push(s.boot);
+snippet qn
+	queryAllNodes${1}
+snippet rout
+	Routine {
+
+		${1:1.wait}
+	};
+snippet rsup
+	^super.new.init${1};
+snippet select
+	select({|${1:item}| ${2} })
+snippet set
+	set(\${1:arg}, ${2:val});
+snippet sk
+	Server.killAll; Server.default.boot;${2}
+snippet sp
+	standardizePath${2}
+snippet switch
+	switch (${1})
+	{${2}}	{${3}}
+	{${4}}	{${5}};
+snippet while
+	while({${1:condition}}, {
+		${2:do}
+	});
