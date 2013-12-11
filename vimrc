@@ -387,7 +387,7 @@ let Tlist_Use_Right_Window = 1
 let Tlist_WinWidth = 40
 " }}}
 
-let g:SuperTabDefaultCompletionType = '<c-n>'
+" let g:SuperTabDefaultCompletionType = '<c-n>'
 
 " }}}
 
