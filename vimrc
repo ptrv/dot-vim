@@ -70,7 +70,8 @@ endif
 " Or use vividchalk
 " colorscheme topfunky-light
 " colorscheme default
-colorscheme github
+" colorscheme github
+colorscheme zenburn
 
 set autochdir " always switch to the current file directory
 
