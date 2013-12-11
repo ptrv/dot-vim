@@ -91,3 +91,6 @@
 [submodule "bundle/autoload_cscope.vim"]
 	path = bundle/autoload_cscope.vim
 	url = https://github.com/vim-scripts/autoload_cscope.vim
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
