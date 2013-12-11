@@ -19,6 +19,7 @@
 [submodule "bundle/taglist.vim"]
 	path = bundle/taglist.vim
 	url = https://github.com/emnh/taglist.vim.git
+    ignore = untracked
 [submodule "bundle/tlib_vim"]
 	path = bundle/tlib_vim
 	url = https://github.com/tomtom/tlib_vim.git
@@ -55,9 +56,11 @@
 [submodule "bundle/vim-matchit"]
 	path = bundle/vim-matchit
 	url = https://github.com/tsaleh/vim-matchit.git
+    ignore = untracked
 [submodule "bundle/vim-ragtag"]
 	path = bundle/vim-ragtag
 	url = https://github.com/tpope/vim-ragtag.git
+    ignore = untracked
 [submodule "bundle/vim-repeat"]
 	path = bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
@@ -85,9 +88,11 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+    ignore = untracked
 [submodule "bundle/cscope.vim"]
 	path = bundle/cscope.vim
 	url = https://github.com/vim-scripts/cscope.vim
+    ignore = untracked
 [submodule "bundle/autoload_cscope.vim"]
 	path = bundle/autoload_cscope.vim
 	url = https://github.com/vim-scripts/autoload_cscope.vim
